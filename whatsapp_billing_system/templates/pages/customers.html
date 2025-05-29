@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Customers - WhatsApp Billing System</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">WABS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="customers.html">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="invoices.html">Invoices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="send_message.html">Send Message</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2>Manage Customers</h2>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                Add New Customer
+            </div>
+            <div class="card-body">
+                <form id="add-customer-form">
+                    <div class="mb-3">
+                        <label for="customer-name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="customer-name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="customer-email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="customer-email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="customer-whatsapp" class="form-label">WhatsApp Number</label>
+                        <input type="text" class="form-control" id="customer-whatsapp" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="customer-cpf_cnpj" class="form-label">CPF/CNPJ</label>
+                        <input type="text" class="form-control" id="customer-cpf_cnpj">
+                    </div>
+                    <button type="submit" id="add-customer-btn" class="btn btn-primary">Add Customer</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                Customer List
+            </div>
+            <div class="card-body">
+                <table class="table table-striped mt-2">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>WhatsApp</th>
+                            <th>CPF/CNPJ</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="customer-list-table-body">
+                        <!-- Customer rows will be inserted here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../public/js/main.js" defer></script>
+</body>
+</html>
