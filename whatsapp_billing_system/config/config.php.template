@@ -1,0 +1,36 @@
+<?php
+
+// Database Configuration
+define('DB_HOST', 'YOUR_DATABASE_HOST');
+define('DB_NAME', 'YOUR_DATABASE_NAME');
+define('DB_USER', 'YOUR_DATABASE_USER');
+define('DB_PASS', 'YOUR_DATABASE_PASSWORD');
+
+// Asaas API Configuration
+define('ASAAS_API_KEY', 'YOUR_ASAAS_API_KEY');
+define('ASAAS_BASE_URL', 'https://www.asaas.com/api/v3'); // Or your sandbox/production URL
+
+// Whaticket API Configuration
+define('WHATICKET_API_KEY', 'YOUR_WHATICKET_API_KEY');
+define('WHATICKET_BASE_URL', 'YOUR_WHATICKET_INSTANCE_URL/api'); // e.g., https://mydomain.whaticket.cloud/api
+
+// Optional: Application Environment (development, production)
+// define('APP_ENV', 'development');
+
+return [
+    'database' => [
+        'host' => DB_HOST,
+        'name' => DB_NAME,
+        'user' => DB_USER,
+        'pass' => DB_PASS,
+    ],
+    'asaas' => [
+        'api_key' => ASAAS_API_KEY,
+        'base_url' => ASAAS_BASE_URL,
+    ],
+    'whaticket' => [
+        'api_key' => WHATICKET_API_KEY,
+        'base_url' => WHATICKET_BASE_URL,
+    ],
+    // 'app_env' => APP_ENV,
+];
